@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-section{
+    height: 40vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.search-section .heading{
+    color: #fff;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.search-section h1{
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+
+.search-section p{
+    font-size: 1.5rem;
+    margin-top: 8px;
+}
+
+.search-section .search-box{
+    height: 55px;
+    margin: 45px 0;
+    position: relative;
+}
+
+.search-box i{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    font-size: 1.4rem;
+    color: #8d8d8d;
+    transform: translateY(-50%);
+}
+
+input, button, i{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.search-box input{
+    width: 100%;
+    height: 100%;
+    padding-left: 55px;
+    font-size: 1.1rem;
+}
+
+/* Gallery Section */
+.image-gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-gallery .images{
+    gap: 15px;
+    max-width: 95%;
+    columns: 5 340px;
+    margin-top: 40px;
+}
+
+.images .image-card{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+    margin-bottom: 14px;
+    border-radius: 4px;
+}
+
+.images img{
+    width: 100%;
+}
+
+.image-gallery .load-more{
+    margin: 50px 0;
+    background-color: #576a23;
+    padding: 12px 27px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.image-gallery .load-more.disabled{
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.images .image-card .image-details{
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    transition: bottom 0.1s ease;
+    background: linear-gradient(to top, rgba(0, 0, 0, .6), transparent);
+}
+
+.images .image-card:hover .image-details{
+    bottom: 0;
+}
+
+.photographer{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.photographer i{
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+
+.image-details .photographer span{
+    font-size: 1.05rem;
+}
+
+.image-card .image-details button{
+    cursor: pointer;
+    padding: 3px 8px;
+    font-size: 1.1rem;
+    background: #fff;
+}
+
+/* image preview box */
+.imgBox{
+    display: none;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .65);
+}
+
+.imgBox.view{
+    display: block;
+}
+
+.imgBox .box-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    max-width: 850px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+
+.box-wrapper .preview-img .img{
+    max-height: 65vh;
+    max-width: 90vh;
+}
+.preview-img{
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.preview-img .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.box-wrapper header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .photographer{
+    color: #333;
+}
+
+header .photographer i{
+    font-size: 1.7rem;
+}
+
+header .photographer span{
+    font-size: 1.2rem;
+}
+
+header .buttons i{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    background: #8a6cff;
+    font-size: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.buttons i:last-child{
+    margin-left: 10px;
+    background: #6c757d;
+}
